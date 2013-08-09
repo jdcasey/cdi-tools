@@ -12,8 +12,15 @@
   <artifactId>cdi-tools</artifactId>
   <version>0.1-SNAPSHOT</version>
 
-  <name>cdi-tools</name>
-  <url>http://maven.apache.org</url>
+  <name>CDI Tools</name>
+  <description>Tools for supporting unit testing in CDI applications</description>
+  <url>http://github.com/jdcasey/cdi-tools</url>
+  
+  <scm>
+    <connection>scm:git:http://jdcasey@github.com/jdcasey/cdi-tools.git</connection>
+    <developerConnection>scm:git:git@github.com:jdcasey/cdi-tools.git</developerConnection>
+    <url>http://github.com/jdcasey/cdi-tools</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,8 +30,6 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.jboss.weld.se</groupId>
@@ -37,6 +42,12 @@
   </dependencies>
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>3.8.1</version>
+        <scope>test</scope>
+      </dependency>
       <dependency>
         <groupId>org.commonjava.boms</groupId>
         <artifactId>web-commons-bom</artifactId>
