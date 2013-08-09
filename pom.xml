@@ -9,7 +9,7 @@
 
   <groupId>org.commonjava.util</groupId>
   <artifactId>cdi-tools</artifactId>
-  <version>0.1</version>
+  <version>0.2-SNAPSHOT</version>
 
   <name>CDI Tools</name>
   <description>Tools for supporting unit testing in CDI applications</description>
