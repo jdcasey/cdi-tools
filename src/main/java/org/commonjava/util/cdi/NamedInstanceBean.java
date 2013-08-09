@@ -29,11 +29,19 @@ public class NamedInstanceBean<T>
 
     private final Class<T> type;
 
+    private final boolean doInjection;
+
     public NamedInstanceBean( final T instance, final Class<T> type, final String named )
+    {
+        this( instance, type, named, false );
+    }
+
+    public NamedInstanceBean( final T instance, final Class<T> type, final String named, final boolean doInjection )
     {
         this.instance = instance;
         this.type = type;
         this.named = named;
+        this.doInjection = doInjection;
     }
 
     @Override
@@ -128,6 +136,12 @@ public class NamedInstanceBean<T>
     public Set<InjectionPoint> getInjectionPoints()
     {
         return it.getInjectionPoints();
+    }
+
+    @Override
+    public boolean doInjection()
+    {
+        return doInjection;
     }
 
 }

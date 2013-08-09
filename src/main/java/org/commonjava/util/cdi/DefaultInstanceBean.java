@@ -28,10 +28,18 @@ public class DefaultInstanceBean<T>
 
     private final Class<T> type;
 
+    private final boolean doInjection;
+
     public DefaultInstanceBean( final T instance, final Class<T> type )
+    {
+        this( instance, type, false );
+    }
+
+    public DefaultInstanceBean( final T instance, final Class<T> type, final boolean doInjection )
     {
         this.instance = instance;
         this.type = type;
+        this.doInjection = doInjection;
     }
 
     @Override
@@ -137,6 +145,18 @@ public class DefaultInstanceBean<T>
     public Set<InjectionPoint> getInjectionPoints()
     {
         return it.getInjectionPoints();
+    }
+
+    @Override
+    public boolean doInjection()
+    {
+        return doInjection;
+    }
+
+    @Override
+    public String toString()
+    {
+        return String.format( "DefaultInstanceBean [instance=%s, type=%s]", instance, type );
     }
 
 }

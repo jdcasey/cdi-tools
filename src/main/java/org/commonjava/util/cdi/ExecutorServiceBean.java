@@ -23,7 +23,7 @@ public class ExecutorServiceBean
 
                 return t;
             }
-        } ), ExecutorService.class, named );
+        } ), ExecutorService.class, named, true );
     }
 
 }

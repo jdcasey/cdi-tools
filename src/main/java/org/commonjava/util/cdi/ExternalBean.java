@@ -17,4 +17,6 @@ public interface ExternalBean<T>
 
     T getInstance();
 
+    boolean doInjection();
+
 }
